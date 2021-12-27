@@ -269,4 +269,6 @@ stdio.h
 -
 messages.h
 /home/user/CLionProjects/esc_adapter/Core/Src/messages.h
+stdbool.h
+-
 

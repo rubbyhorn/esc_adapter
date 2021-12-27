@@ -1,68 +1,57 @@
 #ifndef __MESSAGES_H
 #define __MESSAGES_H
 
-/* STM send requests and devices send responses */
+#define CONFIG_REQUEST_TYPE 0x01
+#define FORCE_DEVICE_REQUEST_TYPE 0x02
+#define VELOCITY_REQUEST_TYPE 0x03
 
-#define RECEIVE_TIMEOUT                     10
+#define PREAMBULE 0xAA
 
-#define NORMAL_REQUEST_TYPE                 0x01
-#define TERMINAL_REQUEST_TYPE               0x02
-#define CONFIG_REQUEST_TYPE                 0x03
-#define FIRMWARE_REQUEST_TYPE               0x04
-#define DEVICE_REQUEST_TYPE                 0xAA
-
-#define NORMAL_REQUEST_LENGTH               5
-#define NORMAL_RESPONSE_LENGTH              9
-#define TERMINAL_REQUEST_LENGTH             15
-#define TERMINAL_RESPONSE_LENGTH            16
-#define CONFIG_REQUEST_LENGTH               18
-#define DEVICES_REQUEST_LENGTH              7
-#define DEVICES_RESPONSE_LENGTH             10
+#define MAX_BUFFER_LEN 5
+#define CONFIG_REQUEST_LENGTH       5
+#define CONFIG_RESPONSE_LENGTH      5
+#define VELOCITY_REQUEST_LENGTH     5
+#define VELOCITY_RESPONSE_LENGTH    5
 
 #include <stdint.h>
 
 #pragma pack(push, 1)
 
-struct DevicesRequest
+struct VelocityRequest
 {
-	uint8_t AA1;
-	uint8_t AA2;
+	uint8_t preambule;      //PREAMBULE
+    uint8_t  type;          // 0x03
 	uint8_t address;
-	uint8_t setting;
-	uint8_t velocity1;
-	uint8_t velocity2;
+	uint8_t velocity;
 	uint8_t crc;
 };
 
-struct DevicesResponse
+struct VelocityResponse
 {
-	uint8_t AA;
+	uint8_t preambule;      //PREAMBULE
+    uint8_t  type;          // 0x03
 	uint8_t address;
-	uint8_t errors;
-	uint16_t current1;
-	uint16_t current2;
-	uint8_t velocity1;
-	uint8_t velocity2;
+	uint8_t velocity;
 	uint8_t crc;
 };
 
 struct ConfigRequest
 {
-	uint8_t  AA;
-	uint8_t  type;               // 0x03
-	uint8_t  update_firmware;    // (bool) go to bootloader and update firmware
-	uint8_t  forse_setting;      // (bool) set new address or update firmware even if old address doesn't equal BLDC address
+    uint8_t preambule;      //PREAMBULE
+	uint8_t  type;          // 0x01 or 0x02
 	uint8_t  old_address;
 	uint8_t  new_address;
-	uint16_t high_threshold;
-	uint16_t low_threshold;
-	uint16_t average_threshold;
-	uint8_t  update_correction;
-	uint16_t clockwise_speed_k;
-	uint16_t counterclockwise_speed_k;
 	uint8_t  crc;
 };
 
+struct ConfigResponse
+{
+    uint8_t preambule;      //PREAMBULE
+    uint8_t  type;          // 0x03 or 0x02
+    uint8_t  old_address;
+    uint8_t  new_address;
+    uint8_t  crc;
+};
 
 #pragma pack(pop)
 
