@@ -44,14 +44,14 @@
 //    HAL_UART_Transmit_DMA(&huart1,  transmit_buffer,  DEVICES_RESPONSE_LENGTH);
 //}
 
-bool parse_config_package(device_settings *device_struct,  uint8_t  *message)
+bool parse_config_package(device_settings *device_struct,  uint8_t  *message, bool force)
 {
 	if  (IsChecksumm8bCorrect(message, CONFIG_REQUEST_LENGTH))  {
         struct ConfigRequest req;
 
         memcpy((void*)&req,  (void*)message,  CONFIG_REQUEST_LENGTH);
 
-        if  (req.old_address  ==  device_struct->device_adress)  {
+        if  (req.old_address  ==  device_struct->device_adress || force)  {
         	device_struct->device_adress  =  req.new_address;
         	return true;
         }

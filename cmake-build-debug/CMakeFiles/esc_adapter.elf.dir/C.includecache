@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+../Core/Inc/data.h
+stdint.h
+-
+messages.h
+../Core/Inc/messages.h
+device.h
+../Core/Inc/device.h
+stdbool.h
+-
+
+../Core/Inc/device.h
+stdbool.h
+-
+stdint.h
+-
+
 ../Core/Inc/esc_adapter.h
 
 ../Core/Inc/messages.h
@@ -271,4 +287,6 @@ messages.h
 /home/user/CLionProjects/esc_adapter/Core/Src/messages.h
 stdbool.h
 -
+data.h
+/home/user/CLionProjects/esc_adapter/Core/Src/data.h
 

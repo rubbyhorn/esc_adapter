@@ -96,16 +96,37 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Inc/checksum.h">
+			<Option target="esc_adapter.elf"/>
+		</Unit>
+		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Inc/data.h">
+			<Option target="esc_adapter.elf"/>
+		</Unit>
+		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Inc/device.h">
+			<Option target="esc_adapter.elf"/>
+		</Unit>
 		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Inc/esc_adapter.h">
 			<Option target="esc_adapter.elf"/>
 		</Unit>
 		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Inc/main.h">
 			<Option target="esc_adapter.elf"/>
 		</Unit>
+		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Inc/messages.h">
+			<Option target="esc_adapter.elf"/>
+		</Unit>
 		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Inc/stm32f0xx_hal_conf.h">
 			<Option target="esc_adapter.elf"/>
 		</Unit>
 		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Inc/stm32f0xx_it.h">
+			<Option target="esc_adapter.elf"/>
+		</Unit>
+		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Src/checksum.c">
+			<Option target="esc_adapter.elf"/>
+		</Unit>
+		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Src/data.c">
+			<Option target="esc_adapter.elf"/>
+		</Unit>
+		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Src/device.c">
 			<Option target="esc_adapter.elf"/>
 		</Unit>
 		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Src/esc_adapter.c">

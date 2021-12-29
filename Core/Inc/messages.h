@@ -4,10 +4,11 @@
 #define CONFIG_REQUEST_TYPE 0x01
 #define FORCE_DEVICE_REQUEST_TYPE 0x02
 #define VELOCITY_REQUEST_TYPE 0x03
+#define ERROR_REQUEST_TYPE 0x03
 
 #define PREAMBULE 0xAA
 
-#define MAX_BUFFER_LEN 5
+#define MAX_BUFFER_LENGTH 5
 #define CONFIG_REQUEST_LENGTH       5
 #define CONFIG_RESPONSE_LENGTH      5
 #define VELOCITY_REQUEST_LENGTH     5
@@ -50,6 +51,15 @@ struct ConfigResponse
     uint8_t  type;          // 0x03 or 0x02
     uint8_t  old_address;
     uint8_t  new_address;
+    uint8_t  crc;
+};
+
+struct ErrorResponse
+{
+    uint8_t preambule;      //PREAMBULE
+    uint8_t  type;          // 0x04
+    uint8_t  address;
+    uint8_t  error_type;
     uint8_t  crc;
 };
 

@@ -142,6 +142,87 @@ esc_adapter.elf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/esc_adapter.elf.dir/build.make CMakeFiles/esc_adapter.elf.dir/build
 .PHONY : esc_adapter.elf/fast
 
+Core/Src/checksum.obj: Core/Src/checksum.c.obj
+
+.PHONY : Core/Src/checksum.obj
+
+# target to build an object file
+Core/Src/checksum.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/esc_adapter.elf.dir/build.make CMakeFiles/esc_adapter.elf.dir/Core/Src/checksum.c.obj
+.PHONY : Core/Src/checksum.c.obj
+
+Core/Src/checksum.i: Core/Src/checksum.c.i
+
+.PHONY : Core/Src/checksum.i
+
+# target to preprocess a source file
+Core/Src/checksum.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/esc_adapter.elf.dir/build.make CMakeFiles/esc_adapter.elf.dir/Core/Src/checksum.c.i
+.PHONY : Core/Src/checksum.c.i
+
+Core/Src/checksum.s: Core/Src/checksum.c.s
+
+.PHONY : Core/Src/checksum.s
+
+# target to generate assembly for a file
+Core/Src/checksum.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/esc_adapter.elf.dir/build.make CMakeFiles/esc_adapter.elf.dir/Core/Src/checksum.c.s
+.PHONY : Core/Src/checksum.c.s
+
+Core/Src/data.obj: Core/Src/data.c.obj
+
+.PHONY : Core/Src/data.obj
+
+# target to build an object file
+Core/Src/data.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/esc_adapter.elf.dir/build.make CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.obj
+.PHONY : Core/Src/data.c.obj
+
+Core/Src/data.i: Core/Src/data.c.i
+
+.PHONY : Core/Src/data.i
+
+# target to preprocess a source file
+Core/Src/data.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/esc_adapter.elf.dir/build.make CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.i
+.PHONY : Core/Src/data.c.i
+
+Core/Src/data.s: Core/Src/data.c.s
+
+.PHONY : Core/Src/data.s
+
+# target to generate assembly for a file
+Core/Src/data.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/esc_adapter.elf.dir/build.make CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.s
+.PHONY : Core/Src/data.c.s
+
+Core/Src/device.obj: Core/Src/device.c.obj
+
+.PHONY : Core/Src/device.obj
+
+# target to build an object file
+Core/Src/device.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/esc_adapter.elf.dir/build.make CMakeFiles/esc_adapter.elf.dir/Core/Src/device.c.obj
+.PHONY : Core/Src/device.c.obj
+
+Core/Src/device.i: Core/Src/device.c.i
+
+.PHONY : Core/Src/device.i
+
+# target to preprocess a source file
+Core/Src/device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/esc_adapter.elf.dir/build.make CMakeFiles/esc_adapter.elf.dir/Core/Src/device.c.i
+.PHONY : Core/Src/device.c.i
+
+Core/Src/device.s: Core/Src/device.c.s
+
+.PHONY : Core/Src/device.s
+
+# target to generate assembly for a file
+Core/Src/device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/esc_adapter.elf.dir/build.make CMakeFiles/esc_adapter.elf.dir/Core/Src/device.c.s
+.PHONY : Core/Src/device.c.s
+
 Core/Src/esc_adapter.obj: Core/Src/esc_adapter.c.obj
 
 .PHONY : Core/Src/esc_adapter.obj
@@ -808,6 +889,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... esc_adapter.elf"
+	@echo "... Core/Src/checksum.obj"
+	@echo "... Core/Src/checksum.i"
+	@echo "... Core/Src/checksum.s"
+	@echo "... Core/Src/data.obj"
+	@echo "... Core/Src/data.i"
+	@echo "... Core/Src/data.s"
+	@echo "... Core/Src/device.obj"
+	@echo "... Core/Src/device.i"
+	@echo "... Core/Src/device.s"
 	@echo "... Core/Src/esc_adapter.obj"
 	@echo "... Core/Src/esc_adapter.i"
 	@echo "... Core/Src/esc_adapter.s"
