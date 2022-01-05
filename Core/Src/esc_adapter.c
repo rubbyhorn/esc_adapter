@@ -10,6 +10,7 @@
 #include "messages.h"
 #include <stdbool.h>
 #include "data.h"
+#include "checksum.h"
 
 #define RECEIVE_TIMEOUT 3000 // timeout in tics
 
@@ -23,7 +24,6 @@ static bool frameReady, frameError = false;
 device_settings deviceSettings;
 extern UART_HandleTypeDef huart1;
 
-void discardFrame();
 void processFrame();
 void newFrame();
 void processError();
@@ -37,15 +37,15 @@ void esc_adapter_loop(){
         processFrame();
     }
     if (frameError) {
-        discardFrame();
+        newFrame();
     }
     __disable_irq();
     if (HAL_GetTick() - prevTick  >=  RECEIVE_TIMEOUT)  {
-        HAL_UART_AbortReceive_IT(&huart1);
-        const char *message = "UART timeout error. Waiting new frame.\n";
-        HAL_UART_Transmit(&huart1, (uint8_t *)message, strlen(message),1000);
+        HAL_UART_AbortReceive(&huart1);
+//        const char *message = "\nUART timeout error.\n";
+//        HAL_UART_Transmit(&huart1, (uint8_t *)message, strlen(message),1000);
         prevTick = HAL_GetTick();
-        discardFrame();
+        newFrame();
     }
     __enable_irq();
 }
@@ -55,19 +55,22 @@ void HAL_UART_RxCpltCallback (UART_HandleTypeDef * huart){
         prevTick = HAL_GetTick();
         RxBuff[RxCounter] = buff;
         RxCounter++;
-        if (RxCounter == 1 && buff != PREAMBULE){
+        if (RxCounter == 1 && buff != MAGIC){
             frameError = true;
             return;
         }
         else if (RxCounter == 2){
             switch (buff) {
-                case CONFIG_REQUEST_TYPE:
-                case FORCE_DEVICE_REQUEST_TYPE:
-                    frameSize = CONFIG_REQUEST_LENGTH; break;
-                case VELOCITY_REQUEST_TYPE:
-                    frameSize = VELOCITY_REQUEST_LENGTH; break;
+                case CONFIG_TYPE:
+                case FORCE_CONFIG_TYPE:
+                    frameSize = CONFIG_REQUEST_LENGTH;
+                    break;
+                case VELOCITY_TYPE:
+                    frameSize = VELOCITY_REQUEST_LENGTH;
+                    break;
                 default:
-                    frameError = true; return;
+                    frameError = true;
+                    return;
             }
             HAL_UART_Receive_IT(&huart1, &buff, 1); // continue reciving
         }
@@ -81,13 +84,6 @@ void HAL_UART_RxCpltCallback (UART_HandleTypeDef * huart){
     }
 }
 
-void discardFrame(){
-    
-    const char *message = "frame discarded.\n";
-    HAL_UART_Transmit_IT(&huart1, (uint8_t *)message, strlen(message));
-    newFrame();
-}
-
 void newFrame(){
     RxCounter = 0;
     frameSize = MAX_BUFFER_LENGTH;
@@ -97,20 +93,30 @@ void newFrame(){
 
 void processFrame(){
     switch (RxBuff[1]) {
-        case CONFIG_REQUEST_TYPE:
-            if(!parse_config_package(&deviceSettings, RxBuff, false)) processError();
+        case CONFIG_TYPE:
+            if(!parse_config_package(&deviceSettings, RxBuff, false))
+              processError(CONFIG_TYPE);
             break;
-        case FORCE_DEVICE_REQUEST_TYPE:
-            parse_config_package(&deviceSettings, RxBuff, true);
+        case FORCE_CONFIG_TYPE:
+            if(!parse_config_package(&deviceSettings, RxBuff, true))
+              processError(CONFIG_TYPE);
             break;
-        case VELOCITY_REQUEST_TYPE:
-
+        case VELOCITY_TYPE:
+            if(!parse_config_package(&deviceSettings, RxBuff, false))
+              processError(CONFIG_TYPE);
             break;
     }
-    HAL_UART_Transmit(&huart1, RxBuff, frameSize, 1000);
     newFrame();
 }
 
-void processError(){
+void processError(int errType){
+    struct ErrorResponse response;
 
+
+    response.magic = 0xAA;
+    response.type = ERROR_TYPE;
+    response.address = deviceSettings.device_adress;
+    response.error_type = errType;
+    AddChecksumm8b((uint8_t*)&response,ERROR_LENGTH);
+    HAL_UART_Transmit(&huart1, (uint8_t*)&response, ERROR_LENGTH, 1000);
 }

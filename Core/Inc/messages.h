@@ -1,18 +1,19 @@
 #ifndef __MESSAGES_H
 #define __MESSAGES_H
 
-#define CONFIG_REQUEST_TYPE 0x01
-#define FORCE_DEVICE_REQUEST_TYPE 0x02
-#define VELOCITY_REQUEST_TYPE 0x03
-#define ERROR_REQUEST_TYPE 0x03
+#define CONFIG_TYPE 0x01
+#define FORCE_CONFIG_TYPE 0x02
+#define VELOCITY_TYPE 0x03
+#define ERROR_TYPE 0x04
 
-#define PREAMBULE 0xAA
+#define MAGIC 0xAA
 
 #define MAX_BUFFER_LENGTH 5
-#define CONFIG_REQUEST_LENGTH       5
-#define CONFIG_RESPONSE_LENGTH      5
-#define VELOCITY_REQUEST_LENGTH     5
-#define VELOCITY_RESPONSE_LENGTH    5
+#define CONFIG_REQUEST_LENGTH 5
+#define CONFIG_RESPONSE_LENGTH 5
+#define VELOCITY_REQUEST_LENGTH 5
+#define VELOCITY_RESPONSE_LENGTH 5
+#define ERROR_LENGTH 5
 
 #include <stdint.h>
 
@@ -20,8 +21,8 @@
 
 struct VelocityRequest
 {
-	uint8_t preambule;      //PREAMBULE
-    uint8_t  type;          // 0x03
+	uint8_t magic;            //MAGIC
+  uint8_t  type;            // 0x03
 	uint8_t address;
 	uint8_t velocity;
 	uint8_t crc;
@@ -29,8 +30,8 @@ struct VelocityRequest
 
 struct VelocityResponse
 {
-	uint8_t preambule;      //PREAMBULE
-    uint8_t  type;          // 0x03
+	uint8_t magic;            //MAGIC
+  uint8_t  type;            // 0x03
 	uint8_t address;
 	uint8_t velocity;
 	uint8_t crc;
@@ -38,8 +39,8 @@ struct VelocityResponse
 
 struct ConfigRequest
 {
-    uint8_t preambule;      //PREAMBULE
-	uint8_t  type;          // 0x01 or 0x02
+  uint8_t magic;            //MAGIC
+	uint8_t  type;            // 0x01 or 0x02
 	uint8_t  old_address;
 	uint8_t  new_address;
 	uint8_t  crc;
@@ -47,7 +48,7 @@ struct ConfigRequest
 
 struct ConfigResponse
 {
-    uint8_t preambule;      //PREAMBULE
+    uint8_t magic;          //MAGIC
     uint8_t  type;          // 0x03 or 0x02
     uint8_t  old_address;
     uint8_t  new_address;
@@ -56,8 +57,8 @@ struct ConfigResponse
 
 struct ErrorResponse
 {
-    uint8_t preambule;      //PREAMBULE
-    uint8_t  type;          // 0x04
+    uint8_t magic;          //MAGIC
+    uint8_t  type;          // 0x03 or 0x02
     uint8_t  address;
     uint8_t  error_type;
     uint8_t  crc;

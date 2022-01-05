@@ -81,6 +81,7 @@ CMakeFiles/esc_adapter.elf.dir/Core/Src/device.c.obj: ../Drivers/STM32F0xx_HAL_D
 CMakeFiles/esc_adapter.elf.dir/Core/Src/device.c.obj: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h
 CMakeFiles/esc_adapter.elf.dir/Core/Src/device.c.obj: ../Core/Src/device.c
 
+CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj: ../Core/Inc/checksum.h
 CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj: ../Core/Inc/data.h
 CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj: ../Core/Inc/device.h
 CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj: ../Core/Inc/esc_adapter.h

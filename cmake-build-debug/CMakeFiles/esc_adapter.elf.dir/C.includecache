@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+../Core/Inc/checksum.h
+stdint.h
+-
+stdbool.h
+-
+
 ../Core/Inc/data.h
 stdint.h
 -
@@ -289,4 +295,6 @@ stdbool.h
 -
 data.h
 /home/user/CLionProjects/esc_adapter/Core/Src/data.h
+checksum.h
+/home/user/CLionProjects/esc_adapter/Core/Src/checksum.h
 

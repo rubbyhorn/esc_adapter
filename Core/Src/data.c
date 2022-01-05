@@ -6,6 +6,8 @@
 #include "device.h"
 #include "main.h"
 
+extern UART_HandleTypeDef huart1;
+
 //uint8_t  transmit_buffer[TRANSMIT_BUFFER_SIZE];
 
 //bool parse_device_package(device_settings *device_struct,  uint8_t  *message)
@@ -52,7 +54,16 @@ bool parse_config_package(device_settings *device_struct,  uint8_t  *message, bo
         memcpy((void*)&req,  (void*)message,  CONFIG_REQUEST_LENGTH);
 
         if  (req.old_address  ==  device_struct->device_adress || force)  {
-        	device_struct->device_adress  =  req.new_address;
+          struct ConfigResponse response;
+          response.magic = 0xAA;
+          response.type = force ? FORCE_CONFIG_TYPE : CONFIG_TYPE;
+          response.old_address = device_struct->device_adress;
+          response.new_address = req.new_address;
+          AddChecksumm8b((uint8_t*)&response,ERROR_LENGTH);
+
+          device_struct->device_adress  =  req.new_address;
+
+          HAL_UART_Transmit(&huart1, (uint8_t*)&response, ERROR_LENGTH, 1000);
         	return true;
         }
 	}
