@@ -120,6 +120,9 @@ CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj: ../Drivers/STM32F0xx_
 CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h
 CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj: ../Core/Src/esc_adapter.c
 
+CMakeFiles/esc_adapter.elf.dir/Core/Src/flash.c.obj: ../Core/Src/flash.c
+
+CMakeFiles/esc_adapter.elf.dir/Core/Src/main.c.obj: ../Core/Inc/device.h
 CMakeFiles/esc_adapter.elf.dir/Core/Src/main.c.obj: ../Core/Inc/esc_adapter.h
 CMakeFiles/esc_adapter.elf.dir/Core/Src/main.c.obj: ../Core/Inc/main.h
 CMakeFiles/esc_adapter.elf.dir/Core/Src/main.c.obj: ../Core/Inc/stm32f0xx_hal_conf.h

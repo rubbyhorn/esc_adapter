@@ -108,6 +108,9 @@
 		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Inc/esc_adapter.h">
 			<Option target="esc_adapter.elf"/>
 		</Unit>
+		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Inc/flash.h">
+			<Option target="esc_adapter.elf"/>
+		</Unit>
 		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Inc/main.h">
 			<Option target="esc_adapter.elf"/>
 		</Unit>
@@ -130,6 +133,9 @@
 			<Option target="esc_adapter.elf"/>
 		</Unit>
 		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Src/esc_adapter.c">
+			<Option target="esc_adapter.elf"/>
+		</Unit>
+		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Src/flash.c">
 			<Option target="esc_adapter.elf"/>
 		</Unit>
 		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Src/main.c">

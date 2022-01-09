@@ -250,6 +250,33 @@ Core/Src/esc_adapter.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/esc_adapter.elf.dir/build.make CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.s
 .PHONY : Core/Src/esc_adapter.c.s
 
+Core/Src/flash.obj: Core/Src/flash.c.obj
+
+.PHONY : Core/Src/flash.obj
+
+# target to build an object file
+Core/Src/flash.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/esc_adapter.elf.dir/build.make CMakeFiles/esc_adapter.elf.dir/Core/Src/flash.c.obj
+.PHONY : Core/Src/flash.c.obj
+
+Core/Src/flash.i: Core/Src/flash.c.i
+
+.PHONY : Core/Src/flash.i
+
+# target to preprocess a source file
+Core/Src/flash.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/esc_adapter.elf.dir/build.make CMakeFiles/esc_adapter.elf.dir/Core/Src/flash.c.i
+.PHONY : Core/Src/flash.c.i
+
+Core/Src/flash.s: Core/Src/flash.c.s
+
+.PHONY : Core/Src/flash.s
+
+# target to generate assembly for a file
+Core/Src/flash.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/esc_adapter.elf.dir/build.make CMakeFiles/esc_adapter.elf.dir/Core/Src/flash.c.s
+.PHONY : Core/Src/flash.c.s
+
 Core/Src/main.obj: Core/Src/main.c.obj
 
 .PHONY : Core/Src/main.obj
@@ -901,6 +928,9 @@ help:
 	@echo "... Core/Src/esc_adapter.obj"
 	@echo "... Core/Src/esc_adapter.i"
 	@echo "... Core/Src/esc_adapter.s"
+	@echo "... Core/Src/flash.obj"
+	@echo "... Core/Src/flash.i"
+	@echo "... Core/Src/flash.s"
 	@echo "... Core/Src/main.obj"
 	@echo "... Core/Src/main.i"
 	@echo "... Core/Src/main.s"

@@ -10,22 +10,22 @@ extern UART_HandleTypeDef huart1;
 
 //uint8_t  transmit_buffer[TRANSMIT_BUFFER_SIZE];
 
-//bool parse_device_package(device_settings *device_struct,  uint8_t  *message)
-//{
-//	if  (IsChecksumm8bCorrect(message, DEVICES_REQUEST_LENGTH))  {
-//
-//		struct DevicesRequest req;
-//
-//		memcpy((void*)&req,  (void*)message,  DEVICES_REQUEST_LENGTH);
-//
-//        if  (req.address  ==  device_struct->device_adress)  {
-//        	device_struct->PWM_Duty  =  req.velocity1;
-//        	UpdateDeviceSettings(&device_struct1);
-//            return true;
-//        }
-//	}
-//    return false;
-//}
+bool parse_velocity_package(device_settings *device_struct,  uint8_t  *message, bool force)
+{
+	if  (IsChecksumm8bCorrect(message, VELOCITY_TYPE))  {
+
+		struct VelocityRequest req;
+
+		memcpy((void*)&req,  (void*)message,  VELOCITY_REQUEST_LENGTH);
+
+        if  (req.address  ==  device_struct->device_adress)  {
+        	device_struct->PWM_Duty  =  req.velocity;
+        	UpdateDeviceSettings(device_struct);
+            return true;
+        }
+	}
+    return false;
+}
 
 //void device_response(device_settings  *device_struct)
 //{

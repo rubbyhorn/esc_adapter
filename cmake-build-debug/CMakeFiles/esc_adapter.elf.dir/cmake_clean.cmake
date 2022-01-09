@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.obj"
   "CMakeFiles/esc_adapter.elf.dir/Core/Src/device.c.obj"
   "CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj"
+  "CMakeFiles/esc_adapter.elf.dir/Core/Src/flash.c.obj"
   "CMakeFiles/esc_adapter.elf.dir/Core/Src/main.c.obj"
   "CMakeFiles/esc_adapter.elf.dir/Core/Src/stm32f0xx_hal_msp.c.obj"
   "CMakeFiles/esc_adapter.elf.dir/Core/Src/stm32f0xx_it.c.obj"

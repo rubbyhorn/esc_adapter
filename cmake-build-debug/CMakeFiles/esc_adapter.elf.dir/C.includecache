@@ -6,22 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../Core/Inc/checksum.h
-stdint.h
--
-stdbool.h
--
-
-../Core/Inc/data.h
-stdint.h
--
-messages.h
-../Core/Inc/messages.h
-device.h
-../Core/Inc/device.h
-stdbool.h
--
-
 ../Core/Inc/device.h
 stdbool.h
 -
@@ -30,9 +14,9 @@ stdint.h
 
 ../Core/Inc/esc_adapter.h
 
-../Core/Inc/messages.h
-stdint.h
--
+../Core/Inc/main.h
+stm32f0xx_hal.h
+../Core/Inc/stm32f0xx_hal.h
 
 ../Core/Inc/stm32f0xx_hal_conf.h
 stm32f0xx_hal_rcc.h
@@ -278,23 +262,11 @@ stm32f0xx_hal_uart_ex.h
 stm32f0xx_hal_def.h
 ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h
 
-/home/user/CLionProjects/esc_adapter/Core/Src/esc_adapter.c
-stdint.h
--
+/home/user/CLionProjects/esc_adapter/Core/Src/main.c
+main.h
+/home/user/CLionProjects/esc_adapter/Core/Src/main.h
 esc_adapter.h
 /home/user/CLionProjects/esc_adapter/Core/Src/esc_adapter.h
-stm32f0xx_hal.h
-/home/user/CLionProjects/esc_adapter/Core/Src/stm32f0xx_hal.h
-string.h
--
-stdio.h
--
-messages.h
-/home/user/CLionProjects/esc_adapter/Core/Src/messages.h
-stdbool.h
--
-data.h
-/home/user/CLionProjects/esc_adapter/Core/Src/data.h
-checksum.h
-/home/user/CLionProjects/esc_adapter/Core/Src/checksum.h
+device.h
+/home/user/CLionProjects/esc_adapter/Core/Src/device.h
 

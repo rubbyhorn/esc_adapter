@@ -23,13 +23,15 @@ static bool frameReady, frameError = false;
 
 device_settings deviceSettings;
 extern UART_HandleTypeDef huart1;
+extern TIM_HandleTypeDef htim17;
 
 void processFrame();
 void newFrame();
 void processError();
 
 void esc_adapter_init(){
-    newFrame();
+  volatile HAL_StatusTypeDef status = HAL_TIM_PWM_Start(&htim17, TIM_CHANNEL_1);
+  newFrame();
 }
 
 void esc_adapter_loop(){
@@ -102,7 +104,7 @@ void processFrame(){
               processError(CONFIG_TYPE);
             break;
         case VELOCITY_TYPE:
-            if(!parse_config_package(&deviceSettings, RxBuff, false))
+            if(!parse_velocity_package(&deviceSettings, RxBuff, false))
               processError(CONFIG_TYPE);
             break;
     }

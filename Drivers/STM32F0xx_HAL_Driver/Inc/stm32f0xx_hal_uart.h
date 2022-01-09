@@ -188,8 +188,7 @@ typedef enum
   * @note  HAL UART Reception type value aims to identify which type of Reception is ongoing.
   *        It is expected to admit following values :
   *           HAL_UART_RECEPTION_STANDARD         = 0x00U,
-  *           HAL_UART_RE
-        HAL_UART_Receive_IT(&huart1, &buff, 1);CEPTION_TOIDLE           = 0x01U,
+  *           HAL_UART_RECEPTION_TOIDLE           = 0x01U,
   *           HAL_UART_RECEPTION_TORTO            = 0x02U,
   *           HAL_UART_RECEPTION_TOCHARMATCH      = 0x03U,
   */

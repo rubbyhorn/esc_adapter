@@ -29,6 +29,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/user/CLionProjects/esc_adapter/Core/Src/data.c" "/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.obj"
   "/home/user/CLionProjects/esc_adapter/Core/Src/device.c" "/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles/esc_adapter.elf.dir/Core/Src/device.c.obj"
   "/home/user/CLionProjects/esc_adapter/Core/Src/esc_adapter.c" "/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj"
+  "/home/user/CLionProjects/esc_adapter/Core/Src/flash.c" "/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles/esc_adapter.elf.dir/Core/Src/flash.c.obj"
   "/home/user/CLionProjects/esc_adapter/Core/Src/main.c" "/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles/esc_adapter.elf.dir/Core/Src/main.c.obj"
   "/home/user/CLionProjects/esc_adapter/Core/Src/stm32f0xx_hal_msp.c" "/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles/esc_adapter.elf.dir/Core/Src/stm32f0xx_hal_msp.c.obj"
   "/home/user/CLionProjects/esc_adapter/Core/Src/stm32f0xx_it.c" "/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles/esc_adapter.elf.dir/Core/Src/stm32f0xx_it.c.obj"
