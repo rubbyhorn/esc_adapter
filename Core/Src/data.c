@@ -18,9 +18,18 @@ bool parse_velocity_package(device_settings *device_struct,  uint8_t  *message, 
 		memcpy((void*)&req,  (void*)message,  VELOCITY_REQUEST_LENGTH);
 
         if  (req.address  ==  device_struct->device_adress || force)  {
+          struct VelocityResponse response;
+          response.magic = 0xAA;
+          response.type = force ? FORCE_VELOCITY_TYPE : VELOCITY_TYPE;
+          response.address = device_struct->device_adress;
+          response.velocity = req.velocity;
+          AddChecksumm8b((uint8_t*)&response,ERROR_LENGTH);
+
         	device_struct->velocity  =  req.velocity;
         	UpdateDeviceSettings(device_struct);
-            return true;
+
+          HAL_UART_Transmit(&huart1, (uint8_t*)&response, ERROR_LENGTH, 1000);
+          return true;
         }
 	}
     return false;
