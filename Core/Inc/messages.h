@@ -4,7 +4,8 @@
 #define CONFIG_TYPE 0x01
 #define FORCE_CONFIG_TYPE 0x02
 #define VELOCITY_TYPE 0x03
-#define ERROR_TYPE 0x04
+#define FORCE_VELOCITY_TYPE 0x04
+#define ERROR_TYPE 0x05
 
 #define MAGIC 0xAA
 
@@ -22,16 +23,16 @@
 struct VelocityRequest
 {
 	uint8_t magic;            //MAGIC
-  uint8_t  type;            // 0x03
+  uint8_t  type;            // 0x03 or 0x04
 	uint8_t address;
-	uint8_t velocity;
+	int8_t velocity;
 	uint8_t crc;
 };
 
 struct VelocityResponse
 {
 	uint8_t magic;            //MAGIC
-  uint8_t  type;            // 0x03
+  uint8_t  type;            // 0x03 or 0x04
 	uint8_t address;
 	uint8_t velocity;
 	uint8_t crc;

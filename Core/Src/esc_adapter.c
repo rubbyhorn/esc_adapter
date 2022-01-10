@@ -68,6 +68,7 @@ void HAL_UART_RxCpltCallback (UART_HandleTypeDef * huart){
                     frameSize = CONFIG_REQUEST_LENGTH;
                     break;
                 case VELOCITY_TYPE:
+                case FORCE_VELOCITY_TYPE:
                     frameSize = VELOCITY_REQUEST_LENGTH;
                     break;
                 default:
@@ -107,6 +108,10 @@ void processFrame(){
             if(!parse_velocity_package(&deviceSettings, RxBuff, false))
               processError(CONFIG_TYPE);
             break;
+      case FORCE_VELOCITY_TYPE:
+        if(!parse_velocity_package(&deviceSettings, RxBuff, true))
+          processError(CONFIG_TYPE);
+        break;
     }
     newFrame();
 }

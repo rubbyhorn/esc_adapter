@@ -12,13 +12,13 @@ extern UART_HandleTypeDef huart1;
 
 bool parse_velocity_package(device_settings *device_struct,  uint8_t  *message, bool force)
 {
-	if  (IsChecksumm8bCorrect(message, VELOCITY_TYPE))  {
+	if  (IsChecksumm8bCorrect(message, VELOCITY_REQUEST_LENGTH))  {
 
 		struct VelocityRequest req;
 
 		memcpy((void*)&req,  (void*)message,  VELOCITY_REQUEST_LENGTH);
 
-        if  (req.address  ==  device_struct->device_adress)  {
+        if  (req.address  ==  device_struct->device_adress || force)  {
         	device_struct->PWM_Duty  =  req.velocity;
         	UpdateDeviceSettings(device_struct);
             return true;
