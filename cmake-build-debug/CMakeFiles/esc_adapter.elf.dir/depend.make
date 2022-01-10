@@ -9,6 +9,7 @@ CMakeFiles/esc_adapter.elf.dir/Core/Src/checksum.c.obj: ../Core/Src/checksum.c
 CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.obj: ../Core/Inc/checksum.h
 CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.obj: ../Core/Inc/data.h
 CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.obj: ../Core/Inc/device.h
+CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.obj: ../Core/Inc/flash.h
 CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.obj: ../Core/Inc/main.h
 CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.obj: ../Core/Inc/messages.h
 CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.obj: ../Core/Inc/stm32f0xx_hal_conf.h
@@ -85,6 +86,7 @@ CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj: ../Core/Inc/checksum.
 CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj: ../Core/Inc/data.h
 CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj: ../Core/Inc/device.h
 CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj: ../Core/Inc/esc_adapter.h
+CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj: ../Core/Inc/flash.h
 CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj: ../Core/Inc/messages.h
 CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj: ../Core/Inc/stm32f0xx_hal_conf.h
 CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj: ../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f030x6.h

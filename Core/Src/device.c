@@ -10,6 +10,6 @@
 void UpdateDeviceSettings(device_settings *device_struct)
 {
 
-	TIM17->CCR1  =  PWM_NEUTRAL+device_struct->PWM_Duty;
+	TIM17->CCR1  =  PWM_NEUTRAL+device_struct->velocity;
 }
 

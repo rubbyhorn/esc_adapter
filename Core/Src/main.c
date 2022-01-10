@@ -94,7 +94,7 @@ int main(void)
   MX_USART1_UART_Init();
   MX_TIM17_Init();
   /* USER CODE BEGIN 2 */
-//  esc_adapter_init();
+  esc_adapter_init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -105,21 +105,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-//    esc_adapter_loop();
-
-    uint8_t message = 0;
-    volatile HAL_StatusTypeDef status = HAL_UART_Receive(&huart1, &message, 1 ,1000);
-    if (status == HAL_OK){
-      if (message) {
-        device_settings settings;
-        settings.device_adress = message;
-        FLASH_WriteSettings(&settings);
-      } else {
-        device_settings settings;
-        FLASH_ReadSettings(&settings);
-        HAL_UART_Transmit(&huart1, &settings.device_adress, 1, 1000);
-      }
-    }
+    esc_adapter_loop();
   }
   /* USER CODE END 3 */
 }

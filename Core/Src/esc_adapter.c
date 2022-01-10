@@ -11,6 +11,7 @@
 #include <stdbool.h>
 #include "data.h"
 #include "checksum.h"
+#include "flash.h"
 
 #define RECEIVE_TIMEOUT 3000 // timeout in tics
 
@@ -30,7 +31,10 @@ void newFrame();
 void processError();
 
 void esc_adapter_init(){
-  volatile HAL_StatusTypeDef status = HAL_TIM_PWM_Start(&htim17, TIM_CHANNEL_1);
+  FLASH_ReadSettings(&deviceSettings);
+  deviceSettings.velocity = 0;
+  UpdateDeviceSettings(&deviceSettings);
+  HAL_TIM_PWM_Start(&htim17, TIM_CHANNEL_1);
   newFrame();
 }
 
@@ -71,6 +75,10 @@ void HAL_UART_RxCpltCallback (UART_HandleTypeDef * huart){
                 case FORCE_VELOCITY_TYPE:
                     frameSize = VELOCITY_REQUEST_LENGTH;
                     break;
+                case INFO_TYPE:
+                case FORCE_INFO_TYPE:
+                  frameSize = INFO_REQUEST_LENGTH;
+                  break;
                 default:
                     frameError = true;
                     return;
@@ -108,10 +116,19 @@ void processFrame(){
             if(!parse_velocity_package(&deviceSettings, RxBuff, false))
               processError(CONFIG_TYPE);
             break;
-      case FORCE_VELOCITY_TYPE:
-        if(!parse_velocity_package(&deviceSettings, RxBuff, true))
-          processError(CONFIG_TYPE);
-        break;
+        case FORCE_VELOCITY_TYPE:
+          if(!parse_velocity_package(&deviceSettings, RxBuff, true))
+            processError(CONFIG_TYPE);
+          break;
+        case INFO_TYPE:
+          if(!parse_info_package(&deviceSettings, RxBuff, false))
+            processError(CONFIG_TYPE);
+          break;
+        case FORCE_INFO_TYPE:
+          if(!parse_info_package(&deviceSettings, RxBuff, true))
+            processError(CONFIG_TYPE);
+          break;
+
     }
     newFrame();
 }

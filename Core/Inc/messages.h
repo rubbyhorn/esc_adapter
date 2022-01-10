@@ -6,6 +6,8 @@
 #define VELOCITY_TYPE 0x03
 #define FORCE_VELOCITY_TYPE 0x04
 #define ERROR_TYPE 0x05
+#define INFO_TYPE 0x06
+#define FORCE_INFO_TYPE 0x07
 
 #define MAGIC 0xAA
 
@@ -14,6 +16,8 @@
 #define CONFIG_RESPONSE_LENGTH 5
 #define VELOCITY_REQUEST_LENGTH 5
 #define VELOCITY_RESPONSE_LENGTH 5
+#define INFO_REQUEST_LENGTH 4
+#define INFO_RESPONSE_LENGTH 5
 #define ERROR_LENGTH 5
 
 #include <stdint.h>
@@ -50,7 +54,7 @@ struct ConfigRequest
 struct ConfigResponse
 {
     uint8_t magic;          //MAGIC
-    uint8_t  type;          // 0x03 or 0x02
+    uint8_t  type;          // 0x01 or 0x02
     uint8_t  old_address;
     uint8_t  new_address;
     uint8_t  crc;
@@ -59,9 +63,26 @@ struct ConfigResponse
 struct ErrorResponse
 {
     uint8_t magic;          //MAGIC
-    uint8_t  type;          // 0x03 or 0x02
+    uint8_t  type;          // 0x05
     uint8_t  address;
     uint8_t  error_type;
+    uint8_t  crc;
+};
+
+struct InfoRequest
+{
+    uint8_t magic;          //MAGIC
+    uint8_t  type;          // 0x06 or 0x07
+    uint8_t  address;
+    uint8_t  crc;
+};
+
+struct InfoResponse
+{
+    uint8_t magic;          //MAGIC
+    uint8_t  type;          // 0x06 or 0x07
+    uint8_t  address;
+    uint8_t  velocity;
     uint8_t  crc;
 };
 
