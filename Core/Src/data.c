@@ -23,12 +23,12 @@ bool parse_velocity_package(device_settings *device_struct,  uint8_t  *message, 
           response.type = force ? FORCE_VELOCITY_TYPE : VELOCITY_TYPE;
           response.address = device_struct->device_adress;
           response.velocity = req.velocity;
-          AddChecksumm8b((uint8_t*)&response,ERROR_LENGTH);
+          AddChecksumm8b((uint8_t*)&response,VELOCITY_RESPONSE_LENGTH);
 
         	device_struct->velocity  =  req.velocity;
         	UpdateDeviceSettings(device_struct);
 
-          HAL_UART_Transmit(&huart1, (uint8_t*)&response, ERROR_LENGTH, 1000);
+          HAL_UART_Transmit(&huart1, (uint8_t*)&response, VELOCITY_RESPONSE_LENGTH, 1000);
           return true;
         }
 	}
@@ -67,12 +67,12 @@ bool parse_config_package(device_settings *device_struct,  uint8_t  *message, bo
           response.type = force ? FORCE_CONFIG_TYPE : CONFIG_TYPE;
           response.old_address = device_struct->device_adress;
           response.new_address = req.new_address;
-          AddChecksumm8b((uint8_t*)&response,ERROR_LENGTH);
+          AddChecksumm8b((uint8_t*)&response,CONFIG_RESPONSE_LENGTH);
 
           device_struct->device_adress  =  req.new_address;
           FLASH_WriteSettings(device_struct);
 
-          HAL_UART_Transmit(&huart1, (uint8_t*)&response, ERROR_LENGTH, 1000);
+          HAL_UART_Transmit(&huart1, (uint8_t*)&response, CONFIG_RESPONSE_LENGTH, 1000);
         	return true;
         }
 	}
@@ -81,7 +81,7 @@ bool parse_config_package(device_settings *device_struct,  uint8_t  *message, bo
 
 bool parse_info_package(device_settings *device_struct,  uint8_t  *message, bool force)
 {
-  if  (IsChecksumm8bCorrect(message, CONFIG_REQUEST_LENGTH))  {
+  if  (IsChecksumm8bCorrect(message, INFO_REQUEST_LENGTH))  {
     struct InfoRequest req;
 
     memcpy((void*)&req,  (void*)message,  INFO_REQUEST_LENGTH);
@@ -94,7 +94,7 @@ bool parse_info_package(device_settings *device_struct,  uint8_t  *message, bool
       response.velocity = device_struct->velocity;
       AddChecksumm8b((uint8_t*)&response,INFO_RESPONSE_LENGTH);
 
-      HAL_UART_Transmit(&huart1, (uint8_t*)&response, ERROR_LENGTH, 1000);
+      HAL_UART_Transmit(&huart1, (uint8_t*)&response, INFO_RESPONSE_LENGTH, 1000);
       return true;
     }
   }

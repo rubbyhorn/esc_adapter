@@ -106,27 +106,27 @@ void processFrame(){
     switch (RxBuff[1]) {
         case CONFIG_TYPE:
             if(!parse_config_package(&deviceSettings, RxBuff, false))
-              processError(CONFIG_TYPE);
+//              processError(CONFIG_TYPE);
             break;
         case FORCE_CONFIG_TYPE:
             if(!parse_config_package(&deviceSettings, RxBuff, true))
-              processError(CONFIG_TYPE);
+//              processError(CONFIG_TYPE);
             break;
         case VELOCITY_TYPE:
             if(!parse_velocity_package(&deviceSettings, RxBuff, false))
-              processError(CONFIG_TYPE);
+//              processError(CONFIG_TYPE);
             break;
         case FORCE_VELOCITY_TYPE:
           if(!parse_velocity_package(&deviceSettings, RxBuff, true))
-            processError(CONFIG_TYPE);
+//            processError(CONFIG_TYPE);
           break;
         case INFO_TYPE:
           if(!parse_info_package(&deviceSettings, RxBuff, false))
-            processError(CONFIG_TYPE);
+//            processError(CONFIG_TYPE);
           break;
         case FORCE_INFO_TYPE:
           if(!parse_info_package(&deviceSettings, RxBuff, true))
-            processError(CONFIG_TYPE);
+//            processError(CONFIG_TYPE);
           break;
 
     }

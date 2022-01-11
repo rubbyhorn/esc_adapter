@@ -56,14 +56,17 @@ def request_info(port, address=None):
     else:
         data = {'magic': MAGIC, 'type': FORCE_INFO_TYPE, 'address': 0x00}
     request = InfoRequest(*data.values(), calc_crc(data.values()))
+    print(struct.pack(InfoRequestRegexp, *request))
     port.write(struct.pack(InfoRequestRegexp, *request))
 
     raw_response = port.read(INFO_RESPONSE_LENGTH)
-    response = ErrorResponse._make(struct.unpack(ErrorResponseRegexp, raw_response))
-    if response.type == ERROR_TYPE:
+    print(raw_response)
+
+    if raw_response[1] == ERROR_TYPE:
+        response = ErrorResponse._make(struct.unpack(ErrorResponseRegexp, raw_response))
         print(response)
     else:
-        response = VelocityResponse._make(struct.unpack(InfoResponseRegexp, raw_response))
+        response = InfoResponse._make(struct.unpack(InfoResponseRegexp, raw_response))
         print(response)
 
 
@@ -77,16 +80,17 @@ def request_velocity(port, velocity=0x00, address=None):
     port.write(struct.pack(VelocityRequestRegexp, *request))
 
     raw_response = port.read(VELOCITY_RESPONSE_LENGTH)
+    print(raw_response)
 
     if raw_response[1] == ERROR_TYPE:
         response = ErrorResponse._make(struct.unpack(ErrorResponseRegexp, raw_response))
         print(response)
     else:
-        response = InfoResponse._make(struct.unpack(VelocityResponseRegexp, raw_response))
+        response = VelocityResponse._make(struct.unpack(VelocityResponseRegexp, raw_response))
         print(response)
 
 
-def request_config(port, velocity=0x00, old_address=None, new_address=0x00):
+def request_config(port, old_address=None, new_address=0x00):
     if old_address is None:
         data = {'magic': MAGIC, 'type': FORCE_CONFIG_TYPE, 'old_address': 0x00, 'new_address': new_address}
     else:
@@ -96,6 +100,7 @@ def request_config(port, velocity=0x00, old_address=None, new_address=0x00):
     port.write(struct.pack(ConfigRequestRegexp, *request))
 
     raw_response = port.read(CONFIG_RESPONSE_LENGTH)
+    print(raw_response)
 
     if raw_response[1] == ERROR_TYPE:
         response = ErrorResponse._make(struct.unpack(ErrorResponseRegexp, raw_response))
@@ -114,6 +119,16 @@ def main():
                 request_info(port, address=int(sys.argv[2], 0))
             else:
                 request_info(port)
+        if sys.argv[1] == 'config':
+            if len(sys.argv) > 3:
+                request_config(port, old_address=int(sys.argv[2], 0), new_address=int(sys.argv[3], 0))
+            else:
+                request_config(port, new_address=int(sys.argv[2], 0))
+        if sys.argv[1] == 'velocity':
+            if len(sys.argv) > 3:
+                request_velocity(port, address=int(sys.argv[2], 0), velocity=int(sys.argv[3], 0))
+            else:
+                request_velocity(port, velocity=int(sys.argv[2], 0))
     else:
         print("Not enough params!")
     port.close()

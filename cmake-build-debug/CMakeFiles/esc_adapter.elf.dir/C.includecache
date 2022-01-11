@@ -28,6 +28,8 @@ stdbool.h
 stdint.h
 -
 
+../Core/Inc/esc_adapter.h
+
 ../Core/Inc/flash.h
 device.h
 ../Core/Inc/device.h
@@ -303,6 +305,28 @@ device.h
 /home/user/CLionProjects/esc_adapter/Core/Src/device.h
 main.h
 /home/user/CLionProjects/esc_adapter/Core/Src/main.h
+flash.h
+/home/user/CLionProjects/esc_adapter/Core/Src/flash.h
+
+/home/user/CLionProjects/esc_adapter/Core/Src/esc_adapter.c
+stdint.h
+-
+esc_adapter.h
+/home/user/CLionProjects/esc_adapter/Core/Src/esc_adapter.h
+stm32f0xx_hal.h
+/home/user/CLionProjects/esc_adapter/Core/Src/stm32f0xx_hal.h
+string.h
+-
+stdio.h
+-
+messages.h
+/home/user/CLionProjects/esc_adapter/Core/Src/messages.h
+stdbool.h
+-
+data.h
+/home/user/CLionProjects/esc_adapter/Core/Src/data.h
+checksum.h
+/home/user/CLionProjects/esc_adapter/Core/Src/checksum.h
 flash.h
 /home/user/CLionProjects/esc_adapter/Core/Src/flash.h
 
