@@ -169,6 +169,33 @@ Core/Src/checksum.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/esc_adapter.elf.dir/build.make CMakeFiles/esc_adapter.elf.dir/Core/Src/checksum.c.s
 .PHONY : Core/Src/checksum.c.s
 
+Core/Src/communication.obj: Core/Src/communication.c.obj
+
+.PHONY : Core/Src/communication.obj
+
+# target to build an object file
+Core/Src/communication.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/esc_adapter.elf.dir/build.make CMakeFiles/esc_adapter.elf.dir/Core/Src/communication.c.obj
+.PHONY : Core/Src/communication.c.obj
+
+Core/Src/communication.i: Core/Src/communication.c.i
+
+.PHONY : Core/Src/communication.i
+
+# target to preprocess a source file
+Core/Src/communication.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/esc_adapter.elf.dir/build.make CMakeFiles/esc_adapter.elf.dir/Core/Src/communication.c.i
+.PHONY : Core/Src/communication.c.i
+
+Core/Src/communication.s: Core/Src/communication.c.s
+
+.PHONY : Core/Src/communication.s
+
+# target to generate assembly for a file
+Core/Src/communication.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/esc_adapter.elf.dir/build.make CMakeFiles/esc_adapter.elf.dir/Core/Src/communication.c.s
+.PHONY : Core/Src/communication.c.s
+
 Core/Src/data.obj: Core/Src/data.c.obj
 
 .PHONY : Core/Src/data.obj
@@ -919,6 +946,9 @@ help:
 	@echo "... Core/Src/checksum.obj"
 	@echo "... Core/Src/checksum.i"
 	@echo "... Core/Src/checksum.s"
+	@echo "... Core/Src/communication.obj"
+	@echo "... Core/Src/communication.i"
+	@echo "... Core/Src/communication.s"
 	@echo "... Core/Src/data.obj"
 	@echo "... Core/Src/data.i"
 	@echo "... Core/Src/data.s"

@@ -99,6 +99,9 @@
 		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Inc/checksum.h">
 			<Option target="esc_adapter.elf"/>
 		</Unit>
+		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Inc/communication.h">
+			<Option target="esc_adapter.elf"/>
+		</Unit>
 		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Inc/data.h">
 			<Option target="esc_adapter.elf"/>
 		</Unit>
@@ -117,6 +120,9 @@
 		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Inc/messages.h">
 			<Option target="esc_adapter.elf"/>
 		</Unit>
+		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Inc/messages_.h">
+			<Option target="esc_adapter.elf"/>
+		</Unit>
 		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Inc/stm32f0xx_hal_conf.h">
 			<Option target="esc_adapter.elf"/>
 		</Unit>
@@ -124,6 +130,9 @@
 			<Option target="esc_adapter.elf"/>
 		</Unit>
 		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Src/checksum.c">
+			<Option target="esc_adapter.elf"/>
+		</Unit>
+		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Src/communication.c">
 			<Option target="esc_adapter.elf"/>
 		</Unit>
 		<Unit filename="/home/user/CLionProjects/esc_adapter/Core/Src/data.c">

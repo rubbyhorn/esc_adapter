@@ -89,9 +89,22 @@ CMakeFiles/esc_adapter.elf.dir/Core/Src/checksum.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/esc_adapter.elf.dir/Core/Src/checksum.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/user/CLionProjects/esc_adapter/Core/Src/checksum.c -o CMakeFiles/esc_adapter.elf.dir/Core/Src/checksum.c.s
 
+CMakeFiles/esc_adapter.elf.dir/Core/Src/communication.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
+CMakeFiles/esc_adapter.elf.dir/Core/Src/communication.c.obj: ../Core/Src/communication.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/esc_adapter.elf.dir/Core/Src/communication.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Core/Src/communication.c.obj -c /home/user/CLionProjects/esc_adapter/Core/Src/communication.c
+
+CMakeFiles/esc_adapter.elf.dir/Core/Src/communication.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/esc_adapter.elf.dir/Core/Src/communication.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/user/CLionProjects/esc_adapter/Core/Src/communication.c > CMakeFiles/esc_adapter.elf.dir/Core/Src/communication.c.i
+
+CMakeFiles/esc_adapter.elf.dir/Core/Src/communication.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/esc_adapter.elf.dir/Core/Src/communication.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/user/CLionProjects/esc_adapter/Core/Src/communication.c -o CMakeFiles/esc_adapter.elf.dir/Core/Src/communication.c.s
+
 CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.obj: ../Core/Src/data.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.obj -c /home/user/CLionProjects/esc_adapter/Core/Src/data.c
 
 CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.i: cmake_force
@@ -104,7 +117,7 @@ CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.s: cmake_force
 
 CMakeFiles/esc_adapter.elf.dir/Core/Src/device.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Core/Src/device.c.obj: ../Core/Src/device.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/esc_adapter.elf.dir/Core/Src/device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/esc_adapter.elf.dir/Core/Src/device.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Core/Src/device.c.obj -c /home/user/CLionProjects/esc_adapter/Core/Src/device.c
 
 CMakeFiles/esc_adapter.elf.dir/Core/Src/device.c.i: cmake_force
@@ -117,7 +130,7 @@ CMakeFiles/esc_adapter.elf.dir/Core/Src/device.c.s: cmake_force
 
 CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj: ../Core/Src/esc_adapter.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj -c /home/user/CLionProjects/esc_adapter/Core/Src/esc_adapter.c
 
 CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.i: cmake_force
@@ -130,7 +143,7 @@ CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.s: cmake_force
 
 CMakeFiles/esc_adapter.elf.dir/Core/Src/flash.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Core/Src/flash.c.obj: ../Core/Src/flash.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/esc_adapter.elf.dir/Core/Src/flash.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/esc_adapter.elf.dir/Core/Src/flash.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Core/Src/flash.c.obj -c /home/user/CLionProjects/esc_adapter/Core/Src/flash.c
 
 CMakeFiles/esc_adapter.elf.dir/Core/Src/flash.c.i: cmake_force
@@ -143,7 +156,7 @@ CMakeFiles/esc_adapter.elf.dir/Core/Src/flash.c.s: cmake_force
 
 CMakeFiles/esc_adapter.elf.dir/Core/Src/main.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Core/Src/main.c.obj: ../Core/Src/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/esc_adapter.elf.dir/Core/Src/main.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/esc_adapter.elf.dir/Core/Src/main.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Core/Src/main.c.obj -c /home/user/CLionProjects/esc_adapter/Core/Src/main.c
 
 CMakeFiles/esc_adapter.elf.dir/Core/Src/main.c.i: cmake_force
@@ -156,7 +169,7 @@ CMakeFiles/esc_adapter.elf.dir/Core/Src/main.c.s: cmake_force
 
 CMakeFiles/esc_adapter.elf.dir/Core/Src/stm32f0xx_hal_msp.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Core/Src/stm32f0xx_hal_msp.c.obj: ../Core/Src/stm32f0xx_hal_msp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/esc_adapter.elf.dir/Core/Src/stm32f0xx_hal_msp.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/esc_adapter.elf.dir/Core/Src/stm32f0xx_hal_msp.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Core/Src/stm32f0xx_hal_msp.c.obj -c /home/user/CLionProjects/esc_adapter/Core/Src/stm32f0xx_hal_msp.c
 
 CMakeFiles/esc_adapter.elf.dir/Core/Src/stm32f0xx_hal_msp.c.i: cmake_force
@@ -169,7 +182,7 @@ CMakeFiles/esc_adapter.elf.dir/Core/Src/stm32f0xx_hal_msp.c.s: cmake_force
 
 CMakeFiles/esc_adapter.elf.dir/Core/Src/stm32f0xx_it.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Core/Src/stm32f0xx_it.c.obj: ../Core/Src/stm32f0xx_it.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/esc_adapter.elf.dir/Core/Src/stm32f0xx_it.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/esc_adapter.elf.dir/Core/Src/stm32f0xx_it.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Core/Src/stm32f0xx_it.c.obj -c /home/user/CLionProjects/esc_adapter/Core/Src/stm32f0xx_it.c
 
 CMakeFiles/esc_adapter.elf.dir/Core/Src/stm32f0xx_it.c.i: cmake_force
@@ -182,7 +195,7 @@ CMakeFiles/esc_adapter.elf.dir/Core/Src/stm32f0xx_it.c.s: cmake_force
 
 CMakeFiles/esc_adapter.elf.dir/Core/Src/syscalls.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Core/Src/syscalls.c.obj: ../Core/Src/syscalls.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/esc_adapter.elf.dir/Core/Src/syscalls.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/esc_adapter.elf.dir/Core/Src/syscalls.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Core/Src/syscalls.c.obj -c /home/user/CLionProjects/esc_adapter/Core/Src/syscalls.c
 
 CMakeFiles/esc_adapter.elf.dir/Core/Src/syscalls.c.i: cmake_force
@@ -195,7 +208,7 @@ CMakeFiles/esc_adapter.elf.dir/Core/Src/syscalls.c.s: cmake_force
 
 CMakeFiles/esc_adapter.elf.dir/Core/Src/sysmem.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Core/Src/sysmem.c.obj: ../Core/Src/sysmem.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/esc_adapter.elf.dir/Core/Src/sysmem.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/esc_adapter.elf.dir/Core/Src/sysmem.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Core/Src/sysmem.c.obj -c /home/user/CLionProjects/esc_adapter/Core/Src/sysmem.c
 
 CMakeFiles/esc_adapter.elf.dir/Core/Src/sysmem.c.i: cmake_force
@@ -208,7 +221,7 @@ CMakeFiles/esc_adapter.elf.dir/Core/Src/sysmem.c.s: cmake_force
 
 CMakeFiles/esc_adapter.elf.dir/Core/Src/system_stm32f0xx.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Core/Src/system_stm32f0xx.c.obj: ../Core/Src/system_stm32f0xx.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/esc_adapter.elf.dir/Core/Src/system_stm32f0xx.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/esc_adapter.elf.dir/Core/Src/system_stm32f0xx.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Core/Src/system_stm32f0xx.c.obj -c /home/user/CLionProjects/esc_adapter/Core/Src/system_stm32f0xx.c
 
 CMakeFiles/esc_adapter.elf.dir/Core/Src/system_stm32f0xx.c.i: cmake_force
@@ -221,12 +234,12 @@ CMakeFiles/esc_adapter.elf.dir/Core/Src/system_stm32f0xx.c.s: cmake_force
 
 CMakeFiles/esc_adapter.elf.dir/Core/Startup/startup_stm32f030f4px.s.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Core/Startup/startup_stm32f030f4px.s.obj: ../Core/Startup/startup_stm32f030f4px.s
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building ASM object CMakeFiles/esc_adapter.elf.dir/Core/Startup/startup_stm32f030f4px.s.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building ASM object CMakeFiles/esc_adapter.elf.dir/Core/Startup/startup_stm32f030f4px.s.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Core/Startup/startup_stm32f030f4px.s.obj -c /home/user/CLionProjects/esc_adapter/Core/Startup/startup_stm32f030f4px.s
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c.obj: ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c.obj -c /home/user/CLionProjects/esc_adapter/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c.i: cmake_force
@@ -239,7 +252,7 @@ CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c.
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c.obj: ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c.obj -c /home/user/CLionProjects/esc_adapter/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c.i: cmake_force
@@ -252,7 +265,7 @@ CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_co
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c.obj: ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c.obj -c /home/user/CLionProjects/esc_adapter/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c.i: cmake_force
@@ -265,7 +278,7 @@ CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dm
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c.obj: ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c.obj -c /home/user/CLionProjects/esc_adapter/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_exti.c.i: cmake_force
@@ -278,7 +291,7 @@ CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_ex
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c.obj: ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c.obj -c /home/user/CLionProjects/esc_adapter/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c.i: cmake_force
@@ -291,7 +304,7 @@ CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_fl
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c.obj: ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c.obj -c /home/user/CLionProjects/esc_adapter/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c.i: cmake_force
@@ -304,7 +317,7 @@ CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_fl
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c.obj: ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c.obj -c /home/user/CLionProjects/esc_adapter/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c.i: cmake_force
@@ -317,7 +330,7 @@ CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gp
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c.obj: ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c.obj -c /home/user/CLionProjects/esc_adapter/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c.i: cmake_force
@@ -330,7 +343,7 @@ CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c.obj: ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c.obj -c /home/user/CLionProjects/esc_adapter/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c.i: cmake_force
@@ -343,7 +356,7 @@ CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c.obj: ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c.obj -c /home/user/CLionProjects/esc_adapter/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c.i: cmake_force
@@ -356,7 +369,7 @@ CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pw
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c.obj: ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c.obj -c /home/user/CLionProjects/esc_adapter/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c.i: cmake_force
@@ -369,7 +382,7 @@ CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pw
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c.obj: ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c.obj -c /home/user/CLionProjects/esc_adapter/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c.i: cmake_force
@@ -382,7 +395,7 @@ CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rc
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c.obj: ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c.obj -c /home/user/CLionProjects/esc_adapter/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c.i: cmake_force
@@ -395,7 +408,7 @@ CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rc
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c.obj: ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c.obj -c /home/user/CLionProjects/esc_adapter/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c.i: cmake_force
@@ -408,7 +421,7 @@ CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_ti
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c.obj: ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c.obj -c /home/user/CLionProjects/esc_adapter/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c.i: cmake_force
@@ -421,7 +434,7 @@ CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_ti
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.c.obj: ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.c.obj -c /home/user/CLionProjects/esc_adapter/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.c
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.c.i: cmake_force
@@ -434,7 +447,7 @@ CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_ua
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c.obj: CMakeFiles/esc_adapter.elf.dir/flags.make
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c.obj: ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c.obj -c /home/user/CLionProjects/esc_adapter/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c
 
 CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c.i: cmake_force
@@ -448,6 +461,7 @@ CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_ua
 # Object files for target esc_adapter.elf
 esc_adapter_elf_OBJECTS = \
 "CMakeFiles/esc_adapter.elf.dir/Core/Src/checksum.c.obj" \
+"CMakeFiles/esc_adapter.elf.dir/Core/Src/communication.c.obj" \
 "CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.obj" \
 "CMakeFiles/esc_adapter.elf.dir/Core/Src/device.c.obj" \
 "CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj" \
@@ -481,6 +495,7 @@ esc_adapter_elf_OBJECTS = \
 esc_adapter_elf_EXTERNAL_OBJECTS =
 
 esc_adapter.elf: CMakeFiles/esc_adapter.elf.dir/Core/Src/checksum.c.obj
+esc_adapter.elf: CMakeFiles/esc_adapter.elf.dir/Core/Src/communication.c.obj
 esc_adapter.elf: CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.obj
 esc_adapter.elf: CMakeFiles/esc_adapter.elf.dir/Core/Src/device.c.obj
 esc_adapter.elf: CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj
@@ -511,7 +526,7 @@ esc_adapter.elf: CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src
 esc_adapter.elf: CMakeFiles/esc_adapter.elf.dir/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c.obj
 esc_adapter.elf: CMakeFiles/esc_adapter.elf.dir/build.make
 esc_adapter.elf: CMakeFiles/esc_adapter.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking C executable esc_adapter.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/CLionProjects/esc_adapter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Linking C executable esc_adapter.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/esc_adapter.elf.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building /home/user/CLionProjects/esc_adapter/cmake-build-debug/esc_adapter.hex"
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building /home/user/CLionProjects/esc_adapter/cmake-build-debug/esc_adapter.bin"

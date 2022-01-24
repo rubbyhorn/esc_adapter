@@ -6,9 +6,9 @@ CMakeFiles/esc_adapter.elf.dir/Core/Startup/startup_stm32f030f4px.s.obj
 CMakeFiles/esc_adapter.elf.dir/Core/Src/checksum.c.obj
  ../Core/Inc/checksum.h
  /home/user/CLionProjects/esc_adapter/Core/Src/checksum.c
-CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.obj
+CMakeFiles/esc_adapter.elf.dir/Core/Src/communication.c.obj
  ../Core/Inc/checksum.h
- ../Core/Inc/data.h
+ ../Core/Inc/communication.h
  ../Core/Inc/device.h
  ../Core/Inc/flash.h
  ../Core/Inc/main.h
@@ -45,6 +45,8 @@ CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.obj
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h
  ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h
+ /home/user/CLionProjects/esc_adapter/Core/Src/communication.c
+CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.obj
  /home/user/CLionProjects/esc_adapter/Core/Src/data.c
 CMakeFiles/esc_adapter.elf.dir/Core/Src/device.c.obj
  ../Core/Inc/device.h
@@ -84,7 +86,7 @@ CMakeFiles/esc_adapter.elf.dir/Core/Src/device.c.obj
  /home/user/CLionProjects/esc_adapter/Core/Src/device.c
 CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj
  ../Core/Inc/checksum.h
- ../Core/Inc/data.h
+ ../Core/Inc/communication.h
  ../Core/Inc/device.h
  ../Core/Inc/esc_adapter.h
  ../Core/Inc/flash.h

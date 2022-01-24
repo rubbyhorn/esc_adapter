@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/esc_adapter.elf.dir/Core/Src/checksum.c.obj"
+  "CMakeFiles/esc_adapter.elf.dir/Core/Src/communication.c.obj"
   "CMakeFiles/esc_adapter.elf.dir/Core/Src/data.c.obj"
   "CMakeFiles/esc_adapter.elf.dir/Core/Src/device.c.obj"
   "CMakeFiles/esc_adapter.elf.dir/Core/Src/esc_adapter.c.obj"

@@ -9,11 +9,12 @@
 #include <stdio.h>
 #include "messages.h"
 #include <stdbool.h>
-#include "data.h"
+//#include "data.h"
 #include "checksum.h"
 #include "flash.h"
+#include "communication.h"
 
-#define RECEIVE_TIMEOUT 3000 // timeout in tics
+//#define RECEIVE_TIMEOUT 3000 // timeout in tics
 
 static uint8_t RxBuff[MAX_BUFFER_LENGTH]; // received frame
 static uint8_t buff; // last received byte
@@ -28,7 +29,7 @@ extern TIM_HandleTypeDef htim17;
 
 void processFrame();
 void newFrame();
-void processError();
+//void processError();
 
 void esc_adapter_init(){
   FLASH_ReadSettings(&deviceSettings);
@@ -68,17 +69,17 @@ void HAL_UART_RxCpltCallback (UART_HandleTypeDef * huart){
         else if (RxCounter == 2){
             switch (buff) {
                 case CONFIG_TYPE:
-                case FORCE_CONFIG_TYPE:
+//                case FORCE_CONFIG_TYPE:
                     frameSize = CONFIG_REQUEST_LENGTH;
                     break;
                 case VELOCITY_TYPE:
-                case FORCE_VELOCITY_TYPE:
+//                case FORCE_VELOCITY_TYPE:
                     frameSize = VELOCITY_REQUEST_LENGTH;
                     break;
-                case INFO_TYPE:
-                case FORCE_INFO_TYPE:
-                  frameSize = INFO_REQUEST_LENGTH;
-                  break;
+//                case INFO_TYPE:
+//                case FORCE_INFO_TYPE:
+//                  frameSize = INFO_REQUEST_LENGTH;
+//                  break;
                 default:
                     frameError = true;
                     return;
@@ -105,42 +106,42 @@ void newFrame(){
 void processFrame(){
     switch (RxBuff[1]) {
         case CONFIG_TYPE:
-            if(!parse_config_package(&deviceSettings, RxBuff, false))
+            if(!parse_config_package(&deviceSettings, RxBuff))
 //              processError(CONFIG_TYPE);
             break;
-        case FORCE_CONFIG_TYPE:
-            if(!parse_config_package(&deviceSettings, RxBuff, true))
-//              processError(CONFIG_TYPE);
-            break;
+//        case FORCE_CONFIG_TYPE:
+//            if(!parse_config_package(&deviceSettings, RxBuff, true))
+////              processError(CONFIG_TYPE);
+//            break;
         case VELOCITY_TYPE:
-            if(!parse_velocity_package(&deviceSettings, RxBuff, false))
+            if(!parse_velocity_package(&deviceSettings, RxBuff))
 //              processError(CONFIG_TYPE);
             break;
-        case FORCE_VELOCITY_TYPE:
-          if(!parse_velocity_package(&deviceSettings, RxBuff, true))
-//            processError(CONFIG_TYPE);
-          break;
-        case INFO_TYPE:
-          if(!parse_info_package(&deviceSettings, RxBuff, false))
-//            processError(CONFIG_TYPE);
-          break;
-        case FORCE_INFO_TYPE:
-          if(!parse_info_package(&deviceSettings, RxBuff, true))
-//            processError(CONFIG_TYPE);
-          break;
+//        case FORCE_VELOCITY_TYPE:
+//          if(!parse_velocity_package(&deviceSettings, RxBuff, true))
+////            processError(CONFIG_TYPE);
+//          break;
+//        case INFO_TYPE:
+//          if(!parse_info_package(&deviceSettings, RxBuff, false))
+////            processError(CONFIG_TYPE);
+//          break;
+//        case FORCE_INFO_TYPE:
+//          if(!parse_info_package(&deviceSettings, RxBuff, true))
+////            processError(CONFIG_TYPE);
+//          break;
 
     }
     newFrame();
 }
 
-void processError(int errType){
-    struct ErrorResponse response;
-
-
-    response.magic = 0xAA;
-    response.type = ERROR_TYPE;
-    response.address = deviceSettings.device_adress;
-    response.error_type = errType;
-    AddChecksumm8b((uint8_t*)&response,ERROR_LENGTH);
-    HAL_UART_Transmit(&huart1, (uint8_t*)&response, ERROR_LENGTH, 1000);
-}
+//void processError(int errType){
+//    struct ErrorResponse response;
+//
+//
+//    response.magic = 0xAA;
+//    response.type = ERROR_TYPE;
+//    response.address = deviceSettings.device_adress;
+//    response.error_type = errType;
+//    AddChecksumm8b((uint8_t*)&response,ERROR_LENGTH);
+//    HAL_UART_Transmit(&huart1, (uint8_t*)&response, ERROR_LENGTH, 1000);
+//}
