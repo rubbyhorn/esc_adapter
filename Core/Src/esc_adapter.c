@@ -114,8 +114,8 @@ void processFrame(){
 ////              processError(CONFIG_TYPE);
 //            break;
         case VELOCITY_TYPE:
-            if(!parse_velocity_package(&deviceSettings, RxBuff))
-//              processError(CONFIG_TYPE);
+            if(parse_velocity_package(&deviceSettings, RxBuff))
+//              device_response(&deviceSettings);
             break;
 //        case FORCE_VELOCITY_TYPE:
 //          if(!parse_velocity_package(&deviceSettings, RxBuff, true))

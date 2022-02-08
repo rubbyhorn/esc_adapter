@@ -27,7 +27,7 @@
 #define CONFIG_TYPE                 0x03
 #define FORCE_CONFIG_TYPE           0x03
 #define FIRMWARE_REQUEST_TYPE               0x04
-#define VELOCITY_TYPE               0xAA
+#define VELOCITY_TYPE               0x01
 #define FORCE_VELOCITY_TYPE         0xAA
 
 #define NORMAL_REQUEST_LENGTH               5
@@ -35,7 +35,7 @@
 #define TERMINAL_REQUEST_LENGTH             15
 #define TERMINAL_RESPONSE_LENGTH            16
 #define CONFIG_REQUEST_LENGTH               18
-#define VELOCITY_REQUEST_LENGTH              7
+#define VELOCITY_REQUEST_LENGTH              5
 #define VELOCITY_RESPONSE_LENGTH             10
 
 #include <stdint.h>
@@ -44,12 +44,10 @@
 
 struct VelocityRequest
 {
-    uint8_t AA1;
-    uint8_t AA2;
+    uint8_t AA;
+    uint8_t type; // 0x01
     uint8_t address;
-    uint8_t setting;
-    uint8_t velocity1;
-    uint8_t velocity2;
+    int8_t velocity;
     uint8_t crc;
 };
 
